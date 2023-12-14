@@ -4,6 +4,7 @@ const PROPIEDADES = "PROPIEDADES";
 const objectId = require("mongodb").ObjectId;
 /* Metodo para ingresar una propiedad */
 async function postPropiedades(propiedad) {
+  console.log(propiedad);
   const clientMongo = await conn.getConnection();
   const result = await clientMongo
     .db(INMOBILIARIA)

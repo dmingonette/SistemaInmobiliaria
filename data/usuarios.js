@@ -41,9 +41,7 @@ async function findByCredential(emailUsuario, passwordUsuario) {
 
 // generador de token
 function generatedToken(user) {
-  const token = jwt.sign({ _id: user._id }, process.env.CLAVESECRETA, {
-    expiresIn: "2h",
-  });
+  const token = jwt.sign({ _id: user._id }, process.env.CLAVESECRETA, {expiresIn: "2h"});
   return token;
 }
 async function getUser(email) {

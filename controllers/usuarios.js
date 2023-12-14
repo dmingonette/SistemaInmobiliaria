@@ -6,7 +6,6 @@ async function addUser(body) {
 async function login(body) {
   const user = await usuarios.findByCredential(body.email, body.password);
   const token = usuarios.generatedToken(user);
-  console.log("entro aca");
   return { user, token };
 }
 async function getUsers() {
